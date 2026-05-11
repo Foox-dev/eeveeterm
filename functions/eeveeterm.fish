@@ -82,22 +82,18 @@ function eeveeterm
     end
 
     if not test -f $scaled
-        python3 -c "
-from PIL import Image
-SCALE = 4
-img = Image.open('$img').convert('RGBA')
-bbox = img.getbbox()
-if bbox:
-    img = img.crop(bbox)
-w, h = img.size
-img = img.resize((w * SCALE, h * SCALE), Image.NEAREST)
-img.save('$scaled')
-"
+        ffmpeg -i $img -vf scale=iw*4:ih*4:flags=neighbor $scaled -y 2>/dev/null
     end
 
-    kitty +kitten icat --align left --transfer-mode=stream $scaled 2>/dev/null
+    if set -q KITTY_WINDOW_ID
+        kitty +kitten icat --align left --transfer-mode=stream $scaled 2>/dev/null
+    else if command -q chafa
+        chafa --size 60x12 --align left $img
+    else
+        echo (set_color yellow)"Please install chafa for image support on non-kitty terminals"(set_color normal)
+    end
 
-    # Greeting
+    # Greeting colors
     set color (switch $name
         case eevee;    echo brown
         case vaporeon; echo blue
