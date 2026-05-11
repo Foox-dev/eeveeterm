@@ -5,8 +5,8 @@ A fish shell greeter that displays a random Eeveelution sprite on every new term
 ## Install Requirements
 
 - [ffmpeg](https://ffmpeg.org/): for image scaling
-- [kitty](https://sw.kovidgoyal.org/kitty/): for best experience (pixel-perfect rendering). However, any terminal with pixel-perfect rendering should work.
-- [chafa](https://hpjansson.org/chafa/): for compatibility with other terminals (Alacritty, WezTerm, etc).
+- [kitty](https://github.com/kovidgoyal/kitty): for best experience (pixel-perfect rendering). However, any terminal with pixel-perfect rendering should work.
+- [chafa](https://github.com/hpjansson/chafa): for compatibility with other terminals (Alacritty, WezTerm, etc).
 
 ## Install
 
