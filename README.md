@@ -1,5 +1,9 @@
 # eeveeterm
 
+<img width="840" height="291" alt="eevee" src="https://github.com/user-attachments/assets/e4186327-2fa9-4c7e-802b-d71d15649067" />
+
+---
+
 A fish shell greeter that displays a random Eeveelution sprite on every new terminal session (with a chance of a shiny!)
 
 ## Install Requirements
