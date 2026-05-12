@@ -1,6 +1,6 @@
 # eeveeterm
 
-<img width="840" height="291" alt="eevee" src="https://github.com/user-attachments/assets/e4186327-2fa9-4c7e-802b-d71d15649067" />
+<img width="739" height="335" alt="eeveeterm" src="https://github.com/user-attachments/assets/c190c54d-a88e-4631-a5ed-d968d34f7eea" />
 
 ---
 
