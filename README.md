@@ -22,7 +22,10 @@ eeveeterm --populate
 
 Zsh
 ```zsh
+# Add to ~/.zshrc:
 zinit light Foox-dev/eeveeterm
+
+# Reload your shell then run:
 eeveeterm --populate
 ```
 
