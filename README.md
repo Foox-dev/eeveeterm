@@ -4,7 +4,7 @@
 
 ---
 
-A fish shell greeter that displays a random Eeveelution sprite on every new terminal session (with a chance of a shiny!)
+A shell greeter that displays a random Eeveelution sprite on every new terminal session (with a chance of a shiny!)
 
 ## Install Requirements
 
@@ -14,8 +14,15 @@ A fish shell greeter that displays a random Eeveelution sprite on every new term
 
 ## Install
 
+Fish (Recommended)
 ```fish
 fisher install Foox-dev/eeveeterm
+eeveeterm --populate
+```
+
+Zsh
+```zsh
+zinit light Foox-dev/eeveeterm
 eeveeterm --populate
 ```
 
