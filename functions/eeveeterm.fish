@@ -82,11 +82,11 @@ function eeveeterm
     end
 
     if not test -f $scaled
-        ffmpeg -i $img -vf scale=iw*4:ih*4:flags=neighbor $scaled -y 2>/dev/null
+        ffmpeg -i $img -vf "scale=iw*4:ih*4:flags=neighbor" $scaled -y 2>/dev/null
     end
 
     if set -q KITTY_WINDOW_ID
-        kitty +kitten icat --align left --transfer-mode=stream $scaled 2>/dev/null
+        kitty +kitten icat --align left $scaled 2>/dev/null
     else if command -q chafa
         chafa --size 60x12 --align left $img
     else

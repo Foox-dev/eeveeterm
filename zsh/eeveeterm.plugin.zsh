@@ -88,7 +88,7 @@ eeveeterm() {
 
     local img
     img=$(head -n1 "$queue_file")
-    sed -i'' -e '1d' "$queue_file"   # sed -i'' works on GNU and BSD sed
+    sed -i'' -e '1d' "$queue_file" # sed -i'' works on GNU and BSD sed
 
     local name
     name=$(basename "$img" | sed 's/\.[^.]*$//')
@@ -111,7 +111,7 @@ eeveeterm() {
     fi
 
     if [[ -n "$KITTY_WINDOW_ID" ]]; then
-        kitty +kitten icat --align left --transfer-mode=stream "$scaled" 2>/dev/null
+        kitty +kitten icat --align left "$scaled" 2>/dev/null
     elif command -v chafa &>/dev/null; then
         chafa --size 60x12 --align left "$img"
     else
